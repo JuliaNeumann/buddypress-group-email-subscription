@@ -1519,16 +1519,16 @@ function ass_manage_members_email_status(  $user_id = '', $group = '' ) {
 		echo '<a href="' . wp_nonce_url( $group_url.'/no/'.$user_id, 'ass_member_email_status' ) . '">'.__('No Email','bp-ass').'</a> | ';
 	}
 	if ( display_subscription_option('sum')) {
-		echo '<a href="' . wp_nonce_url($group_url . '/sum/' . $user_id, 'ass_member_email_status') . '">' . __('Weekly', 'bp-ass') . '</a> | ';
+		echo '<a href="' . wp_nonce_url( $group_url.'/sum/'.$user_id, 'ass_member_email_status' ) . '">'.__('Weekly','bp-ass').'</a> | ';
 	}
 	if ( display_subscription_option('dig')) {
-		echo '<a href="' . wp_nonce_url($group_url . '/dig/' . $user_id, 'ass_member_email_status') . '">' . __('Daily', 'bp-ass') . '</a> | ';
+		echo '<a href="' . wp_nonce_url( $group_url.'/dig/'.$user_id, 'ass_member_email_status' ) . '">'.__('Daily','bp-ass').'</a> | ';
 	}
 	if ( ass_get_forum_type() && display_subscription_option('sub') ) {
 		echo '<a href="' . wp_nonce_url( $group_url.'/sub/'.$user_id, 'ass_member_email_status' ) . '">'.__('New Topics','bp-ass').'</a> | ';
 	}
 	if ( display_subscription_option('supersub')) {
-		echo '<a href="' . wp_nonce_url($group_url . '/supersub/' . $user_id, 'ass_member_email_status') . '">' . __('All Email', 'bp-ass') . '</a>';
+		echo '<a href="' . wp_nonce_url( $group_url.'/supersub/'.$user_id, 'ass_member_email_status' ) . '">'.__('All Email','bp-ass').'</a>';
 	}
 	echo '</span>';
 }
